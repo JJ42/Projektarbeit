@@ -1,9 +1,9 @@
 <?php
-/* Zeigt das Praktikumsformular für die Studenten an, um ihr Praktikum zu erfassen */
+/* Zeigt das Praktikumsformular fuer die Studenten an, um ihr Praktikum zu erfassen */
 session_start();
 require 'db.php';
 
-// Prüfe, ob der Benutzer eingeloggt ist und die Session_variable benutzt ist
+// Pruefe, ob der Benutzer eingeloggt ist und die Session_variable benutzt ist
 
 if ($_SESSION['logged_in'] != true) {
     $_SESSION['message'] = "Du musst eingeloggt sein, um auf deine Daten zugreifen zu k&ouml;nnen!";
@@ -11,20 +11,11 @@ if ($_SESSION['logged_in'] != true) {
 } else {
     
     $datetime = getdate(time());
-    
-    /*
-     * $student_name = $_SESSION['student_name'];
-     * $matrnr = $_SESSION['matrnr'];
-     * $student_email = $_SESSION['student_email'];
-     * $_SESSION['message'] = "Input :" . $student_name;
-     */
-    
-    /* TODO: Vriable für Verifizieren per Mail */
+        
+    /* TODO: Vriable fuer Verifizieren per Mail */
     // $active = $_SESSION['active'];
     
-    // TODO: Daten des Eintrags holen mit der ID
-    
-    /* Praktikumunternehmen auswählen welche aktiv sind */
+    /* Praktikumunternehmen auswÃ¤hlen welche aktiv sind */
     $companies[0]["Id"] = 0;
     $companies[0]["Name"] = "Bitte ausw&auml;hlen0";
     $sql = 'SELECT DISTINCT Id, Name, URL from praktunter where aktiv="1" order by Name';
@@ -58,7 +49,7 @@ if ($_SESSION['logged_in'] != true) {
 		<!-- Formular (mit abgerufenem Inhalt) anzeigen -->
 		<form action="save.php" method="post" class="form-horizontal">
 
-			<!-- Persönliche Daten des Studenten -->
+			<!-- Persï¿½nliche Daten des Studenten -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">Pers&ouml;nliche Daten</h3>
@@ -200,7 +191,7 @@ if ($_SESSION['logged_in'] != true) {
 				</div>
 			</div>
 
-			<!-- Informationen über das Unternehmen -->
+			<!-- Informationen ï¿½ber das Unternehmen -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">Das Praktikumsunternehmen</h3>
@@ -286,7 +277,7 @@ if ($_SESSION['logged_in'] != true) {
 				</div>
 			</div>
 
-			<!-- Informationen über das Praktikum -->
+			<!-- Informationen ï¿½ber das Praktikum -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">Informationen zum Praktikum</h3>
@@ -333,8 +324,8 @@ if ($_SESSION['logged_in'] != true) {
 
 	<p>
            <?php
-        
-        // Meldung über Kontoüberprüfung, nur einmal anzeigen
+                      
+        // Meldung ueber Kontofuberpruefung, nur einmal anzeigen
         if (isset($_SESSION['message'])) {
             echo $_SESSION['message'];
             
@@ -351,7 +342,7 @@ if ($_SESSION['logged_in'] != true) {
           
           /* Daten holen */
         
-        // Erinnerung für den Nutzer, dass das Konto noch nicht aktiviert ist
+        // Erinnerung fï¿½r den Nutzer, dass das Konto noch nicht aktiviert ist
         /*
          * if (! $active) {
          * echo '<div class="info">

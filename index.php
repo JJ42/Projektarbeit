@@ -29,14 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <body>
 
-	<!--  Überschrift der Startseite -->
+	<!--  Ueberschrift der Startseite -->
 	<div class="container-fluid">
 		<div class="well">
 			<h2>Online-Datenbank f&uuml;r Praktika in den BSc-Studieng&auml;ngen
 				IMIT und WINF</h2>
 		</div>
 
-		<!-- Hinweisfeld für die Studenten -->
+		<!-- Hinweisfeld fï¿½r die Studenten -->
 		<div class="jumbotron">
 			<h3>Hinweise:</h3>
 
