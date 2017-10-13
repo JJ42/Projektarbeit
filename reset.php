@@ -5,14 +5,14 @@
 require 'db.php';
 session_start();
 
-// Prüfen, ob die E-Mail Variablen gefüllt sind
-if( isset($_GET['email']) && !empty($_GET['email']))
+// Prï¿½fen, ob die E-Mail Variablen gefï¿½llt sind
+if( isset($_GET['student_email']) && !empty($_GET['student_email']))
 {
-    $email = mysqli_real_escape_string($mysqli, $_GET['email']);
+    $student_email = mysqli_real_escape_string($mysqli, $_GET['student_email']);
     
 
-    // Prüfen ob Benutzeremail existiert
-    $sql = "SELECT * FROM praktikum WHERE email='$email' ";
+    // Prï¿½fen ob Benutzeremail existiert
+    $sql = "SELECT * FROM praktikum WHERE Student_email='$student_email' ";
     $result = mysqli_query($mysqli, $sql);
     $rows = mysqli_num_rows($result);
 
@@ -57,7 +57,7 @@ else {
           </div>
           
           <!-- This input field is needed, to get the email of the user -->
-          <input type="hidden" name="email" value="<?= $email ?>">    
+          <input type="hidden" name="student_email" value="<?= $student_email ?>">    
             
               
           <button class="button button-block">Best&auml;tigen</button>
