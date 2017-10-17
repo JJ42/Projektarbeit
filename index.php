@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div class="form">
 
 		<ul class="tab-group">
-			<li class="tab"><a href="#signup">Registrieren</a></li>
+			<li class="tab"><a href="#register">Registrieren</a></li>
 			<li class="tab active"><a href="#login">Login</a></li>
 		</ul>
 
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			</div>
 			
 			<!-- Formular zum erstmaligen registrieren in die Praktikumsdatenbank -->
-			<div id="signup">
+			<div id="register">
 				<h1>Registrieren</h1>
 
 				<form action="index.php" method="post" autocomplete="off">
