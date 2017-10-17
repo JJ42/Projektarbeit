@@ -1,10 +1,12 @@
 <?php
+
 /* 
  * Diese Seite ueberprueft die Eingaben und aktualisiert die Eingaben in der Datenbank 
  * Erst wird geprueft ob jedes Feld gefuellt ist und ob die Eingabebedinungen eingehalten wurden
  * danach wird durch einen SQL Befehl, der Datensatz in der Datenbank gespeichert
  */
 require 'db.php';
+session_start();
 
 $day = mysqli_escape_string($mysqli, $_POST['day']);
 

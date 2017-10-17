@@ -1,14 +1,15 @@
 <?php
 /*
- * Login, prüfen ob der Benutzer existiert und das Passwort korrekt ist.
- * Sind die Eingaben korrekt werden die bereits getätigten
+ * Login, prï¿½fen ob der Benutzer existiert und das Passwort korrekt ist.
+ * Sind die Eingaben korrekt werden die bereits getï¿½tigten
  * Daten aus der Datenbank abgerufen
  */
 
 /* Datenbankanbindung einbinden */
 require 'db.php';
+session_start();
 
-/* $_POST Variablen gegen SQL injections schützen */
+/* $_POST Variablen gegen SQL injections schï¿½tzen */
 $matrnr = mysqli_escape_string($mysqli, $_POST['matrnr']);
 
 // Abrufen der id und des Passwortes aus der Datenbank
@@ -34,7 +35,7 @@ if ($rows == 0) { // Benutzer existiert nicht
         // $_SESSION['active'] = $student['active'];
         
         /*
-         * TODO: bereits getätigte Einträge holen
+         * TODO: bereits getï¿½tigte Eintrï¿½ge holen
          * 
          */
         

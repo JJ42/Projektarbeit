@@ -1,6 +1,6 @@
 <?php
 /*
- * Überprüft die registrierte Benutzer-E-Mail, der Link zu dieser Seite
+ * UeberprÃ¼ft die registrierte Benutzer-E-Mail, der Link zu dieser Seite
  * ist in der register.php E-Mail-Nachricht enthalten
  */
 require 'db.php';
@@ -14,7 +14,7 @@ if (isset($_GET['email']) && ! empty($_GET['email'])) {
     $result = $mysqli->query("SELECT * FROM praktikum WHERE email='$email'  AND active='0'");
     
     if ($result->num_rows == 0) {
-        $_SESSION['message'] = "Sie haben ihr Konto bereits aktiviert oder die URL ist ungültig!";
+        $_SESSION['message'] = "Sie haben ihr Konto bereits aktiviert oder die URL ist ungï¿½ltig!";
         
         header("location: error.php");
     } else {
@@ -27,7 +27,7 @@ if (isset($_GET['email']) && ! empty($_GET['email'])) {
         header("location: success.php");
     }
 } else {
-    $_SESSION['message'] = "Ung&uuml;ltige Parameter für die Konto&uuml;berpr&uuml;fung!";
+    $_SESSION['message'] = "Ung&uuml;ltige Parameter fï¿½r die Konto&uuml;berpr&uuml;fung!";
     header("location: error.php");
 }
 ?>
