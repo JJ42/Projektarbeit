@@ -1,5 +1,8 @@
 <?php
-/* Zeigt alle Fehlermeldungen an */
+/*
+ * Die error.php Datei, zeigt alle fehlermeldungen an. Es it ein
+ * mit HTML formatiert und leitet einen zurück zur Startseite.
+ */
 session_start();
 ?>
 <!DOCTYPE html>
