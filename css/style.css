@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/*
+ * Formular Block, aussehen
+ */
+.form {
+	background: rgba(160, 179, 176, 0.9);
+	padding: 40px;
+	max-width: 80%;
+	margin: 40px auto;
+	border-radius: 4px;
+	box-shadow: 0 4px 10px 4px rgba(160, 179, 176, 0.3);
+}
+
+/* Abstand der einzelnen Tabs */
+.tab-group {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Listen elemente Aussehen  */
+.tab-group li a {
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	background: rgba(19, 35, 47, 0.25);
+	color: #000000;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+}
+
+/* Farbe des Login oder Registrieren Listenelements beim rüber ziehen mit der Maus */
+.tab-group li a:hover {
+	background: #427ba6;
+	color: #ffffff;
+}
+
+/* Farbe des Login oder Registrieren Listenelements welches ausgewählt ist */
+.tab-group .active a {
+	background: #427ba6;
+	color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
