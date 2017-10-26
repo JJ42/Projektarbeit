@@ -25,7 +25,7 @@ if ($rows == 0) { // Student existiert noch nicht
     
     $student = mysqli_fetch_assoc($result);
     
-    if ($_POST['password'] = $student['Password']) {
+    if ($_POST['password'] == $student['Password']) {
         
         // Benutzer ist eingeloggt
         $_SESSION['logged_in'] = true;

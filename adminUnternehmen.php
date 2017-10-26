@@ -83,9 +83,6 @@ elseif (isset($_POST['logout'])) {
 								</div>
 
 
-
-
-
 								<button class="btn btn-block" name="save">Speichern</button>
 
 							</form>

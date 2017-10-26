@@ -316,8 +316,8 @@ elseif (isset($_POST['logout'])) {
 							<div class="col-sm-10">
 						
 						<?php
-    echo '<textarea name="description" class="form-control" rows="4"
-								id="description" required="required" value="', isset($_SESSION['description']) ? $_SESSION['description'] : '', '"></textarea>'?>
+    echo '<input name="description" class="form-control" rows="4"
+								id="description" required="required" value="', isset($_SESSION['description']) ? $_SESSION['description'] : '', '"></input>'?>
 						
 						</div>
 						</div>

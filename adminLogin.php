@@ -7,7 +7,7 @@ session_start();
  * und es findet eine Weiterleitung auf die Benutzerseite statt.
  * */
 require 'database_connection.php';
-echo 'adminLogin';
+
 
 // $_POST Variable gegen SQL Injection schützen
 $adminNr = mysqli_escape_string($mysqli, $_POST['adminNr']);
@@ -24,7 +24,7 @@ if ($rows == 0) { // Administrator existiert nich
     
     $admin = mysqli_fetch_assoc($result);
     
-    if ($_POST['passwort'] = $admin['Admin_passwort']) {
+    if ($_POST['adminPasswort'] == $admin['Admin_passwort']) {
         
         // Benutzer ist eingeloggt
         $_SESSION['logged_in'] = true; 

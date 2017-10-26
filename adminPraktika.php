@@ -67,7 +67,27 @@ elseif (isset($_POST['logout'])) {
 				<form action="admin.php" method="post">
 					<div class="panel-body">
 						<?php 
+						// Abfragen der aktiven Praktikumsunternehmen
+						$sql = 'SELECT Id, Student_name, Student_matrnr, Company, Department, Town, Day, Month, Year, Angelegt, Kolloquium from praktikum order by angelegt DESC';
+						$result = mysqli_query($mysqli, $sql);
+						$daten = mysqli_num_rows($result);
+						$felder = mysqli_num_fields($result);
 						
+						echo '<table class="table table-striped">';
+						echo '<tr>';
+						for ($j = 0; $j <= $felder - 1; $j ++) {
+						    echo '<td>' . (mysqli_fetch_field_direct($result, $j)->name) . '</td>';
+						}
+						echo '</tr>';
+						
+						while ($zeile = mysqli_fetch_array($result)) {
+						    echo '<tr>';
+						    for ($j = 0; $j < $felder - 1; $j ++) {
+						        echo "<td>" . $zeile[$j] . "</td>";
+						    }
+						    echo "</tr>";
+						}
+						echo '</table>';
 						
 						?>
 					</div>
