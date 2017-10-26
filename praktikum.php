@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 session_start();
 
-
 /*
  * praktikum.php ist die Seite des eingeloggten Bereichs für Studenten.
  * Hier erscheint das Formular, zum Eintragen des Praktikums.
@@ -13,7 +12,6 @@ session_start();
 require 'database_connection.php';
 if ($_SESSION['logged_in'] == true) {
     
- 
     // Datumsformat bestimmen
     $datetime = getdate(time());
     
@@ -316,10 +314,13 @@ elseif (isset($_POST['logout'])) {
 							<div class="col-sm-10">
 						
 						<?php
-    echo '<input name="description" class="form-control" rows="4"
-								id="description" required="required" value="', isset($_SESSION['description']) ? $_SESSION['description'] : '', '"></input>'?>
-						
-						</div>
+    echo '<textarea name="description" class="form-control" rows="6"
+							id="description" required="required">';
+    echo $_SESSION['description'];
+    echo '</textarea>';
+    
+    ?>
+							</div>
 						</div>
 
 					</div>
